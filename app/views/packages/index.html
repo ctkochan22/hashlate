@@ -1,0 +1,8 @@
+<h2>Index</h2>
+
+<%=form_tag("/hash", method: "GET") do %>
+  <%=label_tag(:package, "Input API URL:") %>
+  <br><br>
+  <%=text_area_tag :package, '', rows: 10, cols: 50 %>
+  <%=submit_tag("Hashlate")%>
+<% end %>
