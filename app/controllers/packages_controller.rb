@@ -44,8 +44,9 @@ end
 # Get Routes
 # http://services.my511.org/Transit2.0/GetRoutesForAgencies.aspx?token=d7addd58-ca1e-4395-96f6-55440646c3ae&agencyNames=SF-MUNI
 
-# {"A" => {"1"=> "One", "2 => "Two"},
-# "B" => "bee",
-# "C" => ['a', 'b', 'c']
-# }
+=begin
 
+JSON OBJECT:
+https://congress.api.sunlightfoundation.com/upcoming_bills?apikey=f5da3fb0d7b64be8b718f83d2be029e5
+
+=end
