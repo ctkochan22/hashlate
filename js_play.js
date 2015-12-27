@@ -16,6 +16,21 @@ var test_obj = {"body": {"route": {
   "copyright": "All data copyright San Francisco Muni 2015."}
 };
 
+var mini_test_obj = {"body": {"route": {
+  "stop": [{"tag": "5727", "title": "Civic Center Station Inbound", "lat": "37.77854", "lon": "-122.4148099", "stopId": "15727"}, {"tag": "5417", "title": "Powell Station Inbound", "lat": "37.7842", "lon": "-122.4076899", "stopId": "15417"}, {"tag": "5731", "title": "Montgomery Station Inbound", "lat": "37.7887", "lon": "-122.4019199", "stopId": "15731"}],
+  "direction": [{"stop": [{"tag": "5221"}, {"tag": "7219"}], "tag": "N____O_F10", "title": "Outbound to Ocean Beach via Downtown", "name": "Outbound", "useForUI": "true"}, {"stop": [{"tag": "6992"}, {"tag": "4509"}, {"tag": "4506"}, {"tag": "5234"}, {"tag": "5239"}], "tag": "N____I_F00", "title": "Inbound to Caltrain via Downtown", "name": "Inbound", "useForUI": "true"}],
+  "path": [{"point": [{"lat": "37.76921", "lon": "-122.43301"}, {"lat": "37.76941", "lon": "-122.4294"}]}, {"point": [{"lat": "37.7842", "lon": "-122.40769"}, {"lat": "37.7887", "lon": "-122.40192"}, {"lat": "37.79314", "lon": "-122.3964"}]}, {"point": [{"lat": "37.7655", "lon": "-122.45259"}, {"lat": "37.765", "lon": "-122.45656"}]}, {"point": [{"lat": "37.76052", "lon": "-122.50284"}, {"lat": "37.76068", "lon": "-122.49915"}, {"lat": "37.76083", "lon": "-122.49596"}]}],
+  "tag": "N",
+  "title": "N-Judah",
+  "color": "003399",
+  "oppositeColor": "ffffff",
+  "latMin": "37.7601699",
+  "latMax": "37.7932299",
+  "lonMin": "-122.5092",
+  "lonMax": "-122.38798"},
+  "copyright": "All data copyright San Francisco Muni 2015."}
+};
+
 var package_1 = {"A" : "aeeee"};
 
 var package_2 = {"A" : {"aeeee" : "Hooray"}};
@@ -48,18 +63,29 @@ function hashify(obj_package, base_path){
       } else {
         full_html_item = "<p data-path='" + new_base_path + "'>" + new_html_item + ",</p>";
       };
-
       full_html += full_html_item;
     }; //for loop
+
     full_html += "<p data-path='" + base_path + "'>]</p>";
     return full_html;
 
   } else if (typeof obj_package === 'object') {
     console.log("Caught Object");
+    full_html += "<p data-path='" + base_path + "'>{</p>";
+    var object_html = "";
+
     for (var key in obj_package){
       // ** need to do something with key
-      hashify(obj_package[key], base_path);
-    }
+      var new_base_path = base_path + "[" + key + "]";
+      var new_html_item = hashify(obj_package[key], new_base_path);
+      var full_html_item = "<p data-path='" + new_base_path + "'>" + key + ": " + new_html_item + ",</p>";
+      object_html += full_html_item;
+    };
+    object_html = object_html.slice(0, -5) + object_html.slice(-4);
+    full_html += object_html;
+    full_html += "<p data-path='" + base_path + "'>}</p>";
+    return full_html;
+
   } else {
     console.log("Caught Single Element");
 
@@ -80,11 +106,15 @@ function hashify(obj_package, base_path){
 }; //
 
 
-// console.log("Test: Should Identify Object");
-// hashify(test_obj, "");
 
 console.log("Test: Should Identify Array");
 console.log (hashify(package_4["Array"], ""));
+
+console.log("Test: Should Identify Object");
+console.log (hashify(package_2, ""));
+
+console.log("Test: Should Identify Object");
+console.log (hashify(mini_test_obj, ""));
 
 
 
