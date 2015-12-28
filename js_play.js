@@ -107,15 +107,14 @@ function hashify(obj_package, base_path){
 
 
 
-console.log("Test: Should Identify Array");
-console.log (hashify(package_4["Array"], ""));
+// console.log("Test: Should Identify Array");
+// console.log (hashify(package_4["Array"], ""));
 
-console.log("Test: Should Identify Object");
-console.log (hashify(package_2, ""));
+// console.log("Test: Should Identify Object");
+// console.log (hashify(package_2, ""));
 
-console.log("Test: Should Identify Object");
-console.log (hashify(mini_test_obj, ""));
-
+// console.log("Test: Should Identify Object");
+// console.log (hashify(mini_test_obj, ""));
 
 
 /*

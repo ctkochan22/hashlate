@@ -36,6 +36,7 @@ end
 
 
 
+
 # Stops for a given route:
 # http://webservices.nextbus.com/service/publicXMLFeed?command=routeConfi
 # g&a=sf-muni&r=N
@@ -45,6 +46,11 @@ end
 # http://services.my511.org/Transit2.0/GetRoutesForAgencies.aspx?token=d7addd58-ca1e-4395-96f6-55440646c3ae&agencyNames=SF-MUNI
 
 =begin
+
+XML OBJECT:
+Muni Agencies- http://webservices.nextbus.com/service/publicXMLFeed?command=agencyList
+
+
 
 JSON OBJECT:
 https://congress.api.sunlightfoundation.com/upcoming_bills?apikey=f5da3fb0d7b64be8b718f83d2be029e5
