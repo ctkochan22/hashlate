@@ -1,26 +1,25 @@
 $(document).ready(function(){
 
   $('form').on('submit', function(event){
+    var $form = $(event.target)
     event.preventDefault();
-    console.log("Form Firing:");
-    var input = $(package).val();
-
-    this.reset();
 
     $.ajax({
       type: 'GET',
-      url: input
+      url: '/hash',
+      data: $form.serialize(),
+      dataType: 'html'
     }).done(function(response){
-      console.log("Response Received");
-      // var html_package = hashify(response,"");
-      // console.log(html_package);
-      // $('#api-container').html(html_package);
-
-
-      hashify_append(response, "", '#api-container');
-
+      console.log(response);
+      $('#api-container').html(response);
     });//done
   }); //'$form'
+
+  $('#api-container').on('click', 'p', function(event){
+    event.preventDefault();
+    console.log(this);
+  })
+
 });//$document ready
 
 
