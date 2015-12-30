@@ -1,0 +1,60 @@
+* {
+  background-color: #DDDDDD;
+  /*border: 2px dotted red;*/
+  font-family: Constantia;
+}
+
+p {
+  line-height: 20%;
+}
+
+
+/* ##FORM## */
+form {
+}
+
+textarea {
+  vertical-align: bottom;
+  background-color: white;
+  width: 70%;
+}
+
+label {
+  vertical-align: bottom;
+}
+
+.submit {
+  vertical-align: center;
+}
+/* ####### */
+
+/* ##PATH CONTAINER## */
+#path-container {
+  position: fixed;
+  display: none;
+  border: 3px solid #376180;
+  height: 200px;
+  width: 400px;
+}
+
+
+#path-container {
+  text-align: center;
+  left: 35%;
+}
+
+#path-display {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#close-btn {
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+}
+
+#path-show {
+  line-height: 120%;
+}
+/* ####### */
