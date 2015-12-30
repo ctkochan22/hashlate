@@ -15,7 +15,7 @@ class PackagesController < ApplicationController
 
 def hashify(obj_package, base_path, indent)
   full_html = ""
-  new_indent = indent + 5
+  new_indent = indent + 10
   indent_html = "text-indent:#{indent.to_s}px;"
   new_indent_html = "text-indent:#{new_indent.to_s}px;"
 
