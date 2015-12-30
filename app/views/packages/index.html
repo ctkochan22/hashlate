@@ -1,10 +1,13 @@
-<h2>Index</h2>
-
 <%=form_tag("/hash", method: "GET") do %>
-  <%=label_tag(:url, "Input API URL:") %>
-  <br><br>
-  <%=text_area_tag :url, '', rows: 10, cols: 50 %>
-  <%=submit_tag("Hashlate")%>
+<!--   <%#=label_tag(:url, "Input API URL:") %> -->
+  <%=text_area_tag :url, '', rows: 1 %>
+  <%=submit_tag("Hashlate", class: 'submit')%>
 <% end %>
+<div id='content-container'>
+  <div id='path-container'>
+    <div id='path-display'></div>
+    <a href='#'><p id='close-btn'>Close</p></a>
+  </div>
 
-<div id='api-container'></div>
+  <div id='api-container'></div>
+</div>
