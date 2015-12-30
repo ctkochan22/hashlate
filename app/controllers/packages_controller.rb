@@ -50,7 +50,7 @@ def hashify(obj_package, base_path, indent)
       new_base_path = base_path + "['#{key}']"
       new_html_item = hashify(obj_package[key], new_base_path, new_indent)
       if new_html_item[0..1] == "<p"
-        full_html_item = new_html_item[0...-4] + "," + new_html_item[-4..-1]
+        full_html_item = "<p data-path=#{new_base_path} style=#{new_indent_html}>#{key}: " + new_html_item[0...-4] + "," + new_html_item[-4..-1]
       else
         full_html_item = "<p data-path=#{new_base_path} style=#{new_indent_html}>#{key}: #{new_html_item},</p>"
       end
