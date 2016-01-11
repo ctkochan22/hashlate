@@ -7,6 +7,7 @@
 p {
   line-height: 100%;
   margin-bottom: -10px;
+  border-left: 2px dotted blue;
 }
 
 
@@ -15,6 +16,12 @@ form {
 }
 
 textarea {
+  vertical-align: bottom;
+  background-color: white;
+  width: 70%;
+}
+
+.url_input {
   vertical-align: bottom;
   background-color: white;
   width: 70%;

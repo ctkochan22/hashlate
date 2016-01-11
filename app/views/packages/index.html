@@ -1,8 +1,9 @@
-<%=form_tag("/hash", method: "GET") do %>
+<%=form_tag("/hash", method: "GET", :class => "api_form") do %>
 <!--   <%#=label_tag(:url, "Input API URL:") %> -->
-  <%=text_area_tag :url, '', rows: 1 %>
+  <%=text_field :url, '', rows: 1 , :class => "url_input"%>
   <%=submit_tag("Hashlate", class: 'submit')%>
 <% end %>
+
 <div id='content-container'>
   <div id='path-container'>
     <div id='path-display'></div>
