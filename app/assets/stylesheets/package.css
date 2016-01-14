@@ -1,15 +1,23 @@
 * {
   background-color: #DDDDDD;
   /*border: 2px dotted red;*/
-  font-family: Constantia;
+  /*font-family: Constantia;*/
 }
+
 
 p {
   line-height: 100%;
   margin-bottom: -10px;
-  border-left: 2px dotted blue;
 }
 
+a {
+  text-decoration: none;
+}
+
+#bold {
+  font-weight: bold;
+}
+/* ####### */
 
 /* ##FORM## */
 form {
@@ -52,12 +60,12 @@ label {
 }
 
 #path-display {
-  font-size: 20px;
-  font-weight: bold;
+/*  font-size: 20px;*/
 }
 
 #close-btn {
   position: absolute;
+  margin-bottom: 5%;
   left: 45%;
   bottom: 0;
 }

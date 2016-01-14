@@ -10,7 +10,7 @@ $(document).ready(function(){
       data: $form.serialize(),
       dataType: 'html'
     }).done(function(response){
-      console.log(response);
+      // console.log(response);
       $('#api-container').html(response);
     });//done
 
@@ -30,13 +30,20 @@ $(document).ready(function(){
     event.preventDefault();
     $('#path-display').empty();
     $('#path-container').hide();
-  })
+  });
+
+  reload_page();
+
 });//$document ready
 
 
 function click_for_path() {
   $('#api-container').on('click', 'p', function(event){
     event.preventDefault();
+
+    var target = "<p>" + $(this).html() + "</p";
+    $('#target-element').html(target);
+
     var path = $(this).attr("data-path");
     var path_html = "<pre id='path-show'>" + path + "</pre>";
     console.log(path_html);
@@ -46,7 +53,11 @@ function click_for_path() {
   });
 };
 
-
+function reload_page(){
+  $('#logo').on('click', function(event){
+    location.reload();
+  });
+};
 
 
 // ### UN-USED FUNCTIONS ##
