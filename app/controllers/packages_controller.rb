@@ -7,20 +7,13 @@ class PackagesController < ApplicationController
   def hash
     url = params[:url]
     response = HTTParty.get(url[0]).parsed_response
-
-    # puts "Path Result:"
-    # puts response['results'][0]['bill_id']
-
     @html_package = hashify(response, "", 5)
-    # ap @html_package
     render "packages/_package", layout: false
   end
 
   def hashify(obj_package, base_path, indent)
     full_html = ""
     new_indent = indent + 10
-    # indent_html = "text-indent:#{indent.to_s}px;"
-    # new_indent_html = "text-indent:#{new_indent.to_s}px;"
     indent_html = "margin-left:#{indent.to_s}px;"
     new_indent_html = "margin-left:#{new_indent.to_s}px;"
 
