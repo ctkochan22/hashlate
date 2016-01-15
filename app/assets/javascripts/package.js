@@ -13,15 +13,6 @@ $(document).ready(function(){
       // console.log(response);
       $('#api-container').html(response);
     });//done
-
-    var api = "https://congress.api.sunlightfoundation.com/bills?congress=113&apikey=f5da3fb0d7b64be8b718f83d2be029e5"
-
-    $.ajax({
-      type: 'GET',
-      url: api
-    }).done(function(response){
-      console.log(response['results'][1]['last_version']['urls']['xml'])
-    });
   }); //'$form'
 
   click_for_path();
