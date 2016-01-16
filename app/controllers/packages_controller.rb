@@ -53,6 +53,7 @@ class PackagesController < ApplicationController
 
   def package_array(obj_package, base_path, new_indent)
     new_indent_html = package_indent(new_indent)
+    object_html = ""
     obj_package.each_with_index do |element, index|
       new_base_path = base_path + "[#{index.to_s}]"
       new_html_item = hashify(obj_package[index], new_base_path, new_indent)
@@ -65,8 +66,9 @@ class PackagesController < ApplicationController
           full_html_item = "<p data-path=#{new_base_path} style=#{new_indent_html}>#{new_html_item},</p>"
         end
       end
-      return full_html_item
+      object_html += full_html_item
     end #each loop
+    return object_html
   end #package_array end
 
   def package_hash(obj_package, base_path, new_indent)
