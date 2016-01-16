@@ -20,16 +20,15 @@ $(document).ready(function(){
 });//$document ready
 
 
+//FUNCTIONS
 function click_for_path() {
   $('#api-container').on('click', 'p', function(event){
     event.preventDefault();
 
     var target = "<p>" + $(this).html() + "</p";
     $('#target-element').html(target);
-
     var path = $(this).attr("data-path");
     var path_html = "<pre id='path-show'>" + path + "</pre>";
-    console.log(path_html);
 
     $('#path-display').html(path_html);
     $('#path-container').show();
