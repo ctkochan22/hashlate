@@ -11,8 +11,6 @@ class PackagesController < ApplicationController
     render "packages/_package", layout: false
   end
 
-## FUNCTIONS ##
-
   def hashify(obj_package, base_path, indent)
     full_html = ""
     new_indent = indent + 10
@@ -32,6 +30,8 @@ class PackagesController < ApplicationController
       full_html += "<p data-path=#{base_path} style=#{new_indent_html}>}</p>"
       return full_html
     else
+      # puts("Caught Single Element")
+
       if obj_package.is_a? Numeric
         return "'" + obj_package.to_s + "'"
       elsif obj_package.is_a? String
