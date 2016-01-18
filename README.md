@@ -6,6 +6,10 @@ API Pathfinder is a web application that parses an API’s JSON/XML object and g
 ## How to Use
 API Pathfinder is an extremely easy to use application. Whenever you are working with an API endpoint and are expecting some sort of data package, you can simply place that URL into the search bar. It will then display its contents, indented by its level of nesting. You can then click on any element and it will display in a separate box, the key path you can simply copy and paste in your code.
 
+![](/app/assets/images/api-unparsed.png)
+![](/app/assets/images/api-parsed.png)
+![](/app/assets/images/api-clicked.png)
+
 ## How it Works
 It essentially parses an API response and transforms it into one large html string. Each element is wrapped in html code and tagged with the key path within an html’s data-tag.
 
