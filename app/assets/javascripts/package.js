@@ -16,6 +16,8 @@ $(document).ready(function(){
   click_for_path();
   close_path();
   reload_page();
+  click_about();
+  close_about();
 
 });//$document ready
 
@@ -50,3 +52,16 @@ function reload_page(){
 };
 
 
+function click_about() {
+  $('#about-link').on('click', function(event){
+    event.preventDefault();
+    $('#about').toggle();
+  });
+};
+
+function close_about() {
+  $('#about-close').on('click', function(event){
+    event.preventDefault();
+    $('#about').hide();
+  });
+};

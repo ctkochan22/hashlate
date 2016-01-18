@@ -1,4 +1,4 @@
-<div>
+<div id='form'>
 <%=form_tag("/hash", method: "GET", :class => "api_form") do %>
 <!--   <%#=label_tag(:url, "Input API URL:") %> -->
   <%=text_field :url, '', rows: 1 , :class => "url_input"%>
@@ -13,6 +13,18 @@
     <p id='bold'>Code Path: </p>
     <div id='path-display'></div>
     <button id='close-btn'>Close</button>
+  </div>
+
+  <div id="about">
+    <h4>About API Pathfinder:</h4>
+    <p id='header-description'>API Pathfinder is an app that parses an API's JSON/XML object and generates the key path for any specific attribute. Go ahead in plug in any API url endpoint and click away!</p>
+    <br>
+    <p id='header-description'>Created by Christopher Kosuke Tseng</p>
+    <br>
+    <a href="https://github.com/ctkochan22/hashlate"><p id='header-description'>Github</p></a>
+    <a href="https://www.linkedin.com/in/cktseng"><p id='header-description'>About Me</p></a>
+    <br>
+    <button id='about-close'>Close</button>
   </div>
 
   <div id='api-container'></div>
