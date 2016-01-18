@@ -1,4 +1,4 @@
-### API Pathfinder / Hashlate
+# API Pathfinder / Hashlate
 
 ## Synopsis
 API Pathfinder is a web application that parses an API’s JSON/XML object and generates the key path for any specific attribute. By displaying an object in an easy to read format as well as generating the key path for any element you click, this app is a easy beginner’s tool when working with large API packages.
@@ -14,10 +14,10 @@ The application relies on a recursive method that identifies each element as eit
 jQuery was used to make each element clickable, generating the key path without reloading the page. This was necessary because this program does not use a database, thus refreshing the page will simply erase whatever was displayed.
 
 ## Obstacles
-# Overflowing the Browser Stack
+### Overflowing the Browser Stack
 As the size and level of nesting for an API’s JSON/XML object is unknown, I believed a recursive method would be the best way to address the issue. However, it overwhelmed the browser’s stack (chrome, firefox). However, with a bit of refactoring and moving it to the controller fixed the issue.
 
-# Storing the Key Path without a Database
+### Storing the Key Path without a Database
 I avoided using a database for this application because of how potentially large the database would have to be, growing with each API request. I decided to use HTML’s data attribute to store the key path and use jQuery to retrieve and display the path without refreshing the page.
 
 
