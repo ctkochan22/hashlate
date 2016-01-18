@@ -1,8 +1,10 @@
+<div>
 <%=form_tag("/hash", method: "GET", :class => "api_form") do %>
 <!--   <%#=label_tag(:url, "Input API URL:") %> -->
   <%=text_field :url, '', rows: 1 , :class => "url_input"%>
   <%=submit_tag("Hashlate", class: 'submit')%>
 <% end %>
+</div>
 
 <div id='content-container'>
   <div id='path-container'>

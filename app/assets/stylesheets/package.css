@@ -4,6 +4,9 @@
   /*font-family: Constantia;*/
 }
 
+header {
+  display: inline-block;
+}
 
 p {
   line-height: 100%;
@@ -19,10 +22,14 @@ a {
 }
 /* ####### */
 
-/* ##FORM## */
-form {
+#header-description {
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
+
+/* ##FORM## */
 textarea {
   vertical-align: bottom;
   background-color: white;
