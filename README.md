@@ -1,7 +1,7 @@
 # API Pathfinder / Hashlate
 
 ## Synopsis
-API Pathfinder is a web application that parses an API’s JSON/XML object and generates the key path for any specific attribute. By displaying an object in an easy to read format as well as generating the key path for any element you click, this app is a easy beginner’s tool when working with large API packages.
+API Pathfinder is essentially a clickable version of [JSON Pretty Print](http://jsonprettyprint.com/). This web application parses an API’s JSON/XML object and generates the key path for any specific attribute. By displaying an object in an easy to read format as well as generating the key path for any element you click, this app is a easy beginner’s tool when working with large API packages.
 
 [Link to Deployed App](http://apipathfinder.herokuapp.com/)
 
